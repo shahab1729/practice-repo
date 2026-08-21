@@ -7,4 +7,5 @@
 - Computer Neworking
 - Git and GitHub Fundamentals
 - Git and GitHub Advanced
-- Docker  
+- Docker Fundamentals
+- Docker Advanced  
