@@ -1,5 +1,7 @@
 # DevOps Roadmap -- AI Powered
 
+Note : Always  do 90daysofDevOps daily
+ 
 ## Topics:
 
 - Linux
