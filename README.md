@@ -5,5 +5,5 @@
 - Linux
 - Shell Scripting
 - Computer Neworking
-- Git and GitHub
+- Git and GitHub Fundamentals
 - 
