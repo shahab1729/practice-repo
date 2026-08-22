@@ -15,4 +15,7 @@ Note : Always  do 90daysofDevOps daily
 - Mini Project
 - GitHub Actions
 - Jenkins
-- Kubernetes 
+- Kubernetes
+- AWS
+- Terraform
+- Ansible 
