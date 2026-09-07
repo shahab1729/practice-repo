@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NEXUS — premium pop-culture collectibles, action figures and sci-fi treasures.">
+<title>NEXUS // Pop Culture Collectibles</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#05070d; --panel:#0b101a; --panel2:#0e1522; --line:rgba(111,231,255,.16);
+  --cyan:#6fe7ff; --violet:#a78bfa; --pink:#ff5ca8; --text:#edf7ff; --muted:#8b9bad;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 15% 10%,rgba(91,80,255,.16),transparent 30%),
+    radial-gradient(circle at 85% 25%,rgba(0,220,255,.10),transparent 28%),
+    var(--bg);
+  color:var(--text);font-family:"Space Grotesk",sans-serif;overflow-x:hidden
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:45px 45px;mask-image:linear-gradient(to bottom,black,transparent 85%)
+}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);
+  background:rgba(5,7,13,.78);backdrop-filter:blur(18px)
+}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:Orbitron;font-weight:800;letter-spacing:3px;font-size:21px}
+.logo span{color:var(--cyan)}
+nav{display:flex;gap:28px;color:#b9c5d3;font-size:14px}nav a:hover{color:var(--cyan)}
+.nav-actions{display:flex;gap:10px}.icon{
+  width:40px;height:40px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;background:#0b111b;color:#cfefff
+}
+.cart{position:relative}.cart b{position:absolute;top:-5px;right:-5px;background:var(--pink);font-size:10px;width:17px;height:17px;border-radius:50%;display:grid;place-items:center}
+.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:70px 0 55px}
+.eyebrow{font:600 12px Orbitron;letter-spacing:3px;color:var(--cyan);margin-bottom:22px}
+h1{font:800 clamp(48px,7vw,90px)/.93 Orbitron;letter-spacing:-4px;text-transform:uppercase}
+h1 span{display:block;color:transparent;-webkit-text-stroke:1px #718197}
+.hero p{max-width:560px;color:#9ba9ba;line-height:1.8;margin:27px 0 31px;font-size:16px}
+.buttons{display:flex;gap:13px;flex-wrap:wrap}.btn{padding:14px 20px;border-radius:9px;border:1px solid var(--line);font-weight:700;font-size:13px;letter-spacing:.5px}
+.btn.primary{background:linear-gradient(135deg,#69e7ff,#8d7bff);color:#061019;border:0;box-shadow:0 0 30px rgba(91,216,255,.18)}
+.btn.secondary{background:#0b111b}.btn:hover{transform:translateY(-2px)}
+.hero-art{height:510px;position:relative;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#080d15}
+.hero-art img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.08);opacity:.78}
+.hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,13,.75),transparent 45%,rgba(5,7,13,.15)),linear-gradient(0deg,rgba(5,7,13,.8),transparent 45%)}
+.scan{position:absolute;z-index:2;right:20px;top:20px;border:1px solid rgba(111,231,255,.4);padding:8px 10px;border-radius:6px;font:10px Orbitron;color:var(--cyan);background:#07121aaa}
+.spec{position:absolute;z-index:3;left:22px;bottom:20px;display:flex;gap:20px}
+.spec div{border-left:2px solid var(--cyan);padding-left:10px}.spec strong{display:block;font:700 13px Orbitron}.spec small{color:#8b9bad}
+section{padding:75px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:27px}
+.kicker{font:600 11px Orbitron;color:var(--cyan);letter-spacing:2px}.section-head h2{font:700 30px Orbitron;margin-top:7px}
+.section-head a{color:var(--cyan);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.franchise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.card{background:linear-gradient(180deg,#0c131e,#080d15);border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:.25s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:rgba(111,231,255,.5);box-shadow:0 20px 45px rgba(0,0,0,.35)}
+.pic{height:260px;overflow:hidden;background:radial-gradient(circle at 50% 35%,#17263a 0%,#0d1420 52%,#070b12 100%);position:relative;display:flex;align-items:center;justify-content:center}.pic img{width:100%;height:100%;object-fit:cover;transition:.4s;display:block}.card:hover img{transform:scale(1.06)}
+.badge{position:absolute;left:11px;top:11px;background:#05070ddd;border:1px solid var(--line);padding:6px 8px;border-radius:5px;font:9px Orbitron;color:var(--cyan)}
+.info{padding:15px}.info small{color:#758497}.info h3{font-size:15px;margin:5px 0 13px}.price{display:flex;justify-content:space-between;align-items:center}.price strong{font:700 15px Orbitron}.add{width:31px;height:31px;border:1px solid var(--line);border-radius:7px;display:grid;place-items:center;color:var(--cyan);font-size:20px}
+.banner{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0b111a}
+.banner-copy{padding:50px}.banner-copy h2{font:700 37px/1.1 Orbitron}.banner-copy p{color:var(--muted);line-height:1.7;margin:16px 0 25px}
+.banner img{width:100%;height:100%;min-height:320px;object-fit:cover;filter:brightness(.7)}
+.collection{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.collection a{height:180px;border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}.collection img{width:100%;height:100%;object-fit:cover;filter:brightness(.52);transition:.3s}.collection a:hover img{filter:brightness(.72);transform:scale(1.05)}.collection span{position:absolute;left:16px;bottom:14px;font:600 13px Orbitron;letter-spacing:1px}
+footer{border-top:1px solid var(--line);padding:35px 0;color:#69788a;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}.foot strong{font-family:Orbitron;color:#aebdca}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-art{height:400px}.grid,.franchise-grid{grid-template-columns:repeat(2,1fr)}.collection{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){nav{display:none}.hero{padding-top:45px}.hero-art{height:330px}.grid,.franchise-grid{grid-template-columns:1fr}.collection{grid-template-columns:1fr}.banner{grid-template-columns:1fr}.banner-copy{padding:30px}.foot{flex-direction:column}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">NEXUS<span>//</span>FIGS</a>
+    <nav><a href="#new">NEW DROPS</a><a href="#collections">COLLECTIONS</a><a href="#featured">FEATURED</a><a href="#vault">VAULT</a></nav>
+    <div class="nav-actions"><a class="icon" href="#">⌕</a><a class="icon cart" href="#">🛒<b>2</b></a></div>
+  </div>
+</header>
+
+<main>
+<section class="container hero">
+  <div>
+    <div class="eyebrow">TRANSMISSION // 07.09.26</div>
+    <h1>Own the<br><span>Universe.</span></h1>
+    <p>Premium action figures, display pieces and collector-grade artifacts from the worlds that shaped pop culture — sci-fi, superheroes, anime and beyond.</p>
+    <div class="buttons"><a class="btn primary" href="#new">EXPLORE NEW DROPS ↗</a><a class="btn secondary" href="#collections">VIEW COLLECTIONS</a></div>
+  </div>
+  <div class="hero-art">
+    <img src="https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?auto=format&fit=crop&w=1200&q=85" alt="Sci-fi collectible display">
+    <div class="scan">SYSTEM ONLINE • 98.7%</div>
+    <div class="spec"><div><strong>1:6 SCALE</strong><small>COLLECTOR SERIES</small></div><div><strong>LIMITED</strong><small>RUN // 500</small></div></div>
+  </div>
+</section>
+
+<section class="container" id="new">
+  <div class="section-head"><div><div class="kicker">LATEST ARRIVALS</div><h2>NEW DROPS</h2></div><a href="#">VIEW ALL →</a></div>
+  <div class="grid">
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=700&q=85" alt="Collectible figure"><span class="badge">NEW</span></div><div class="info"><small>ALIEN // SCI-FI</small><h3>XENO WARRIOR — 1:6</h3><div class="price"><strong>$189.00</strong><span class="add">+</span></div></div></article>
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=700&q=85" alt="Toy collection"><span class="badge">HOT</span></div><div class="info"><small>MARVEL STUDIOS</small><h3>HEROES // DELUXE EDITION</h3><div class="price"><strong>$149.00</strong><span class="add">+</span></div></div></article>
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=700&q=85" alt="Action figure"><span class="badge">LIMITED</span></div><div class="info"><small>ANIME // ELITE</small><h3>GALACTIC WARRIOR — 1:7</h3><div class="price"><strong>$129.00</strong><span class="add">+</span></div></div></article>
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=700&q=85" alt="Collectible toys"><span class="badge">EXCLUSIVE</span></div><div class="info"><small>POP CULTURE</small><h3>THE WONDER MACHINE</h3><div class="price"><strong>$99.00</strong><span class="add">+</span></div></div></article>
+  </div>
+</section>
+
+
+<section class="container" id="franchise-figures">
+  <div class="section-head">
+    <div><div class="kicker">MULTIVERSE INVENTORY</div><h2>ICONIC FIGURES</h2></div>
+    <a href="#">BROWSE ALL →</a>
+  </div>
+
+  <div class="franchise-grid">
+    <article class="card">
+      <div class="pic">
+        <img src="https://ninoma.com/cdn/shop/products/AttackonTitan_RAHRealActionHeroesSittedLevi_Livai_Ackerman.jpg" alt="Levi Ackerman Attack on Titan action figure"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/6fe7ff?text=LEVI+ACKERMAN'">
+        <span class="badge">AOT</span>
+      </div>
+      <div class="info"><small>ATTACK ON TITAN</small><h3>LEVI ACKERMAN — RAH</h3><div class="price"><strong>$179.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://e7.pngegg.com/pngimages/67/427/png-clipart-eren-yeager-levi-mikasa-ackerman-attack-on-titan-a-o-t-wings-of-freedom-jaeger-manga-action-figure.png" alt="Eren Yeager Attack on Titan collectible"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/6fe7ff?text=EREN+YEAGER'">
+        <span class="badge">AOT</span>
+      </div>
+      <div class="info"><small>ATTACK ON TITAN</small><h3>EREN YEAGER — TITAN FORM</h3><div class="price"><strong>$159.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/0657/6164/0702/files/d33ceef1-a952-4b17-8bae-adf80bd05614_1.jpg?v=1734241044" alt="Demon Slayer collectible figure"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/ff5ca8?text=DEMON+SLAYER'">
+        <span class="badge">DEMON SLAYER</span>
+      </div>
+      <div class="info"><small>KIMETSU NO YAIBA</small><h3>TANJIRO &amp; NEZUKO</h3><div class="price"><strong>$199.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/0657/6164/0702/files/ICHIBANKUJIDEMONSLAYER-THECONNECTEDTRAIL-EPRIZE-HASHIRACHOCOKKOKyojuroRengoku.png?v=1734240945" alt="Kyojuro Rengoku Demon Slayer figure"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/ff9b4a?text=RENGOKU'">
+        <span class="badge">HASHIRA</span>
+      </div>
+      <div class="info"><small>DEMON SLAYER</small><h3>KYOJURO RENGOKU</h3><div class="price"><strong>$119.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://store.necaonline.com/cdn/shop/files/51741_UNP_14.jpg?v=1721145372&amp;width=1500" alt="Xenomorph Alien Romulus action figure"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/8affc1?text=XENOMORPH'">
+        <span class="badge">ALIEN</span>
+      </div>
+      <div class="info"><small>ALIEN: ROMULUS</small><h3>SCORCHED XENOMORPH</h3><div class="price"><strong>$139.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/2566/3552/products/294676215_2139309072913428_1111266165668480246_n_1024x1024@2x.jpg?v=1658618124" alt="Iron Spider-Man Marvel collectible"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/e63946?text=IRON+SPIDER'">
+        <span class="badge">MARVEL</span>
+      </div>
+      <div class="info"><small>MARVEL STUDIOS</small><h3>IRON SPIDER — PREMIUM</h3><div class="price"><strong>$249.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/2598/1878/files/ja-ru-marvel-splash-pumper-6817-b-spider-man-legacy-toys-3.webp?v=1765344975" alt="Spider-Man Marvel collectible"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/e63946?text=SPIDER-MAN'">
+        <span class="badge">MARVEL</span>
+      </div>
+      <div class="info"><small>MARVEL STUDIOS</small><h3>SPIDER-MAN — WEB SLINGER</h3><div class="price"><strong>$109.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/2598/1878/files/ja-ru-marvel-splash-pumper-6817-a-iron-man-legacy-toys-2.webp?v=1765344973" alt="Iron Man Marvel collectible"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/ff5c5c?text=IRON+MAN'">
+        <span class="badge">MARVEL</span>
+      </div>
+      <div class="info"><small>MARVEL STUDIOS</small><h3>IRON MAN — MARK SERIES</h3><div class="price"><strong>$149.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/0005/9260/9343/products/mini-epics-the-lord-of-rings-gandalf-vinyl-lotr-weta-figure-workshop-pop-stop_629.jpg" alt="Gandalf Lord of the Rings collectible"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/d7c7a3?text=GANDALF'">
+        <span class="badge">MIDDLE-EARTH</span>
+      </div>
+      <div class="info"><small>THE LORD OF THE RINGS</small><h3>GANDALF THE GREY — MINI EPIC</h3><div class="price"><strong>$89.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/1528/8109/products/lord-of-the-rings-collectors-model-number-25-denethor-at-minas-tirith-hand-painted-figurine-eaglemoss-oxford-cult-collectibles_516_large.jpg?v=1522194571" alt="Lord of the Rings collectible"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/d7c7a3?text=MIDDLE-EARTH'">
+        <span class="badge">LOTR</span>
+      </div>
+      <div class="info"><small>MIDDLE-EARTH</small><h3>MINAS TIRITH — ARCHIVE FIGURE</h3><div class="price"><strong>$129.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/0657/6164/0702/files/ICHIBANKUJIDEMONSLAYER-THECONNECTEDTRAIL-EPRIZE-HASHIRACHOCOKKOGiyuTomioka.png?v=1734240867" alt="Giyu Tomioka Demon Slayer figure"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/5ca9ff?text=GIYU'">
+        <span class="badge">HASHIRA</span>
+      </div>
+      <div class="info"><small>DEMON SLAYER</small><h3>GIYU TOMIOKA</h3><div class="price"><strong>$119.00</strong><span class="add">+</span></div></div>
+    </article>
+
+    <article class="card">
+      <div class="pic">
+        <img src="https://cdn.shopify.com/s/files/1/2598/1878/files/ja-ru-marvel-splash-pumper-6817-c-hulk-legacy-toys-4.webp?v=1765344977" alt="Hulk Marvel collectible"
+             onerror="this.onerror=null;this.src='https://placehold.co/700x700/080d15/7cff78?text=HULK'">
+        <span class="badge">MARVEL</span>
+      </div>
+      <div class="info"><small>MARVEL STUDIOS</small><h3>HULK — SMASH EDITION</h3><div class="price"><strong>$139.00</strong><span class="add">+</span></div></div>
+    </article>
+  </div>
+</section>
+
+<section class="container" id="featured">
+  <div class="banner">
+    <div class="banner-copy"><div class="kicker">THE VAULT // FEATURED</div><h2>SPECIMEN<br>ZERO-01</h2><p>A museum-grade centerpiece engineered for collectors who want their shelf to look like it came from another world.</p><a class="btn primary" href="#">ENTER THE VAULT →</a></div>
+    <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=1200&q=85" alt="Futuristic collectible display">
+  </div>
+</section>
+
+<section class="container" id="collections">
+  <div class="section-head"><div><div class="kicker">FANDOM DATABASE</div><h2>EXPLORE WORLDS</h2></div></div>
+  <div class="collection">
+    <a href="#"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=85" alt=""><span>ALIEN / XENOVERSE</span></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=700&q=85" alt=""><span>MARVEL STUDIOS</span></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1569517282132-25d22f4573e6?auto=format&fit=crop&w=700&q=85" alt=""><span>ANIME / OTAKU</span></a>
+    <a href="#"><img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=700&q=85" alt=""><span>SCI-FI ARCHIVE</span></a>
+  </div>
+</section>
+
+<section class="container" id="vault">
+  <div class="section-head"><div><div class="kicker">COLLECTOR'S EDITION</div><h2>THE VAULT</h2></div><a href="#">SEE THE ARCHIVE →</a></div>
+  <div class="grid">
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=700&q=85" alt="Toy figure"></div><div class="info"><small>ARCHIVE / 001</small><h3>GALACTIC COMMANDER</h3><div class="price"><strong>$229.00</strong><span class="add">+</span></div></div></article>
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1608278047522-58806a6ac1c3?auto=format&fit=crop&w=700&q=85" alt="Robot collectible"></div><div class="info"><small>MECHA / 014</small><h3>MECHA UNIT OMEGA</h3><div class="price"><strong>$179.00</strong><span class="add">+</span></div></div></article>
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?auto=format&fit=crop&w=700&q=85" alt="Anime figure"></div><div class="info"><small>ANIME / 023</small><h3>STORM SWORDSMAN</h3><div class="price"><strong>$119.00</strong><span class="add">+</span></div></div></article>
+    <article class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=700&q=85" alt="Pop culture collectible"></div><div class="info"><small>LEGACY / 071</small><h3>ICONIC HERO SERIES</h3><div class="price"><strong>$159.00</strong><span class="add">+</span></div></div></article>
+  </div>
+</section>
+</main>
+
+<footer><div class="container foot"><strong>NEXUS//FIGS</strong><span>COLLECT • DISPLAY • TRANSMIT</span><span>© 2026 NEXUS COLLECTIBLES</span></div></footer>
+</body>
+</html>
