@@ -14,7 +14,8 @@ jobs:
     steps:
       - name: tell hello
         run: echo "Hello Friend"
-  repo-name:
+  repo-name: 
+    needs: greet
     runs-on: ubuntu-22.04
     steps:
       - name: Show Repo name
