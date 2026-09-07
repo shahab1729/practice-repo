@@ -14,6 +14,11 @@ jobs:
     steps:
       - name: tell hello
         run: echo "Hello Friend"
+  repo-name:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Show Repo name
+        run: echo "the repo name is  ${{github.event.repository.name}}"
        
   
   
