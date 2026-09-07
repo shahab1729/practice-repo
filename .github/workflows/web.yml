@@ -8,6 +8,7 @@ on:
   pull_request:
     paths:
       - README.md
+      - .github/workflows/README.md
 
 # What the workflow does
 jobs:
