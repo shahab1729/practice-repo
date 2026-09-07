@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Clone the code
-        run: echo "Code Cloned"
+        uses: actions/checkout@v4
   
   build: 
     needs: code
     runs-on: ubuntu-22.04
     steps:
       - name: Build the code the code with Docker  
-        uses: actions/checkout@v4
+        run: echo "Build comple"
   test:
     needs: build
     runs-on: ubuntu-22.04
