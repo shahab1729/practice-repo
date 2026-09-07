@@ -1,0 +1,21 @@
+#Start with naming ur workflow
+name: "Hello workflow."
+#when the workflow runs
+on: 
+  push:
+    branches: [main]
+#what the workfloe does
+jobs:
+  #name of the workflow
+  greet: 
+    #where the job runs(OS)
+    runs-on:  ubuntu-22.04
+    #the sequence of steps the job does 
+    steps:
+      - name: tell hello
+        run: echo "Hello Friend"
+       
+  
+  
+
+
