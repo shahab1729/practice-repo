@@ -1,27 +1,44 @@
-#Start with naming ur workflow
-name: "Hello workflow."
-#when the workflow runs
-on: 
+name: Protect README
+
+# When the workflow runs
+on:
   push:
     branches: [main]
-#what the workfloe does
+
+  pull_request:
+    paths:
+      - README.md
+
+# What the workflow does
 jobs:
-  #name of the workflow
-  greet: 
-    #where the job runs(OS)
-    runs-on:  ubuntu-22.04
-    #the sequence of steps the job does 
+
+  # First job
+  greet:
+    runs-on: ubuntu-22.04
+
     steps:
-      - name: tell hello
+      - name: Tell hello
         run: echo "Hello Friend"
-  repo-name: 
+
+  # Second job
+  repo-name:
     needs: greet
     runs-on: ubuntu-22.04
+
     steps:
       - name: Show Repo name
-        run: echo "the repo name is  ${{github.event.repository.name}}"
-       
-  
-  
+        run: echo "The repo name is ${{ github.event.repository.name }}"
 
+  # README protection
+  protect-readme:
+    # Only run this job for pull requests
+    if: github.event_name == 'pull_request'
 
+    needs: repo-name
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Reject README changes
+        run: |
+          echo "Changes to README.md are not allowed."
+          exit 1
