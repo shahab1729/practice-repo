@@ -1,5 +1,10 @@
 # GitHub Actions Workflows
 
+
+GitHub Pages:
+🌐 https://shahab1729.github.io/practice-repo/
+
+
 ## 📌 Overview
 
 GitHub Actions is a CI/CD and automation platform built into GitHub. It allows you to automatically build, test, deploy, and automate tasks whenever specific events occur in a repository.
@@ -717,6 +722,3 @@ Production
 
 This is the foundation of **CI/CD automation in modern DevOps**.
 
-
-GitHub Pages:
-🌐 https://shahab1729.github.io/practice-repo/
