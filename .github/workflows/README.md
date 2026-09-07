@@ -716,3 +716,5 @@ Production
 ```
 
 This is the foundation of **CI/CD automation in modern DevOps**.
+GitHub Pages:
+🌐 https://shahab1729.github.io/practice-repo/
