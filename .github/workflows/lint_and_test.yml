@@ -2,7 +2,7 @@
 
 name: Code Lint
 on: 
-  workflow_dispatch:
+  workflow_call:
 
 jobs: 
   code-linter-and-test:
