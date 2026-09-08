@@ -2,14 +2,16 @@ name: Protect README
 
 # When the workflow runs
 on:
-  push:
-    branches: [main]
+  #push:
+    #branches: [main]
 
-  pull_request:
-    paths:
-      - README.md
-      - .github/workflows/README.md
+  #pull_request:
+    #paths:
+      #- README.md
+      #- .github/workflows/README.md
+  workflow_dispatch:
 
+  
 # What the workflow does
 jobs:
 

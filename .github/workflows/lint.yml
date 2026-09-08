@@ -1,0 +1,18 @@
+# Goal: to check if my python code is syntactically correct and follows the best practices
+
+name: Code Lint
+on: 
+  push: 
+
+jobs: 
+  code-linter:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v7
+
+      - name: Code Lint 
+        run: ruff check .   
+
+  
+     

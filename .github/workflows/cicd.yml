@@ -2,8 +2,9 @@
 name: CICD demo
 
 on: 
-  push:
- 
+  #push:
+  workflow_dispatch:
+   
 jobs:
   # CI
   code:
