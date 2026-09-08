@@ -24,11 +24,11 @@ jobs:
         run: echo "My name is ${{ env.NAME }}"
       - name: Show Secrets
         env:
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+          Height: ${{ secrets.Height }}
         run: |
-          echo "::add-mask::$DOCKERHUB_PASSWORD"
-          echo "One fun secret is $DOCKERHUB_PASSWORD"
+          echo "::add-mask::$Height"
+          echo "One fun secret is $Height"
       - name: Show Variables
-        run: echo "My Dockerhub Username is ${{ vars.DOCKERHUB_USERNAME }}"
+        run: echo "My Username is ${{ vars.username }}"
       - name: Show the input env
         run: echo "The selected env is ${{ inputs.environment }}"
