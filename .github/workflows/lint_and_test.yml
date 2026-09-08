@@ -6,7 +6,7 @@ on:
 
 jobs: 
   code-linter-and-test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Code checkout
         uses: actions/checkout@v7

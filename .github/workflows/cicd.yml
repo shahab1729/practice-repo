@@ -4,31 +4,31 @@ name: CICD demo
 on: 
   #push:
   workflow_dispatch:
-   
+
 jobs:
   # CI
   code:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Clone the code
         uses: actions/checkout@v7
   
   build: 
     needs: code
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Build the code with Docker  
         uses: docker/setup-buildx-action@v3 
   test:
     needs: build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: test the Application  
         run: echo "test passed" 
   # CD
   deploy:
     needs: [code,build,test]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy app on server  
         run: echo "App Deployed" 

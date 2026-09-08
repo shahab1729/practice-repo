@@ -11,13 +11,13 @@ on:
       #- .github/workflows/README.md
   workflow_dispatch:
 
-  
+
 # What the workflow does
 jobs:
 
   # First job
   greet:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Tell hello
@@ -26,7 +26,7 @@ jobs:
   # Second job
   repo-name:
     needs: greet
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Show Repo name

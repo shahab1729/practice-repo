@@ -1,0 +1,30 @@
+name: Show Env variables
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Select the environment you want
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - stg
+          - prd
+
+env:
+  NAME: shahab
+  
+jobs:
+  show_env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show plain text env
+        run: echo "My name is ${{ env.NAME }}"
+      - name: Show Secrets
+        run: echo "One fun secret is  ${{ secrets.DOCKERHUB_PASSWORD  }}"
+      - name: Show Variables
+        run: echo "My Dockerhub Username is ${{ vars.DOCKERHUB_USERNAME }}"
+      - name: Show the input env
+        run: echo "The selected env is ${{ inputs.environment }}"
