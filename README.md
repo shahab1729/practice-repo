@@ -6,7 +6,7 @@ Note : Always  do 90daysofDevOps daily
 
 - Linux
 - Shell Scripting
-- Computer Neworking
+- Computer Networking
 - Git and GitHub Fundamentals
 - Git and GitHub Advanced
 - Docker Fundamentals
