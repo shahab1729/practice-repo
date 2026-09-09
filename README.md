@@ -546,22 +546,22 @@ End-to-End DevOps Project
 
 By the end of this roadmap, the objective is to be able to:
 
-* [ ] Manage Linux systems confidently
-* [ ] Write useful Shell scripts
-* [ ] Understand networking fundamentals
-* [ ] Use Git professionally
-* [ ] Build optimized Docker images
-* [ ] Manage multi-container applications
-* [ ] Build CI/CD pipelines
-* [ ] Work with GitHub Actions
-* [ ] Work with Jenkins
-* [ ] Deploy applications to Kubernetes
-* [ ] Deploy infrastructure on AWS
-* [ ] Provision infrastructure using Terraform
-* [ ] Automate configuration using Ansible
-* [ ] Troubleshoot production-style problems
-* [ ] Build complete DevOps projects
-* [ ] Understand the reasoning behind DevOps architecture decisions
+* ☑️ Manage Linux systems confidently
+* ☑️ Write useful Shell scripts
+* ☑️ Understand networking fundamentals
+* ☑️ Use Git professionally
+* ☑️ Build optimized Docker images
+* ☑️ Manage multi-container applications
+* ⬜ Build CI/CD pipelines
+* ⬜ Work with GitHub Actions
+* ⬜ Work with Jenkins
+* ⬜ Deploy applications to Kubernetes
+* ⬜ Deploy infrastructure on AWS
+* ⬜ Provision infrastructure using Terraform
+* ⬜ Automate configuration using Ansible
+* ⬜ Troubleshoot production-style problems
+* ☑️ Build complete DevOps projects
+* ⬜ Understand the reasoning behind DevOps architecture decisions
 
 ---
 
