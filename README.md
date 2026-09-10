@@ -226,26 +226,6 @@ By the end of this roadmap, the objective is to be able to:
 
 ---
 
-# 📈 Current Progress
-
-> **Current Stage: GitHub Actions ⚙️**
-
-```text
-Linux              ██████████  100% ✅
-Shell Scripting    ██████████  100% ✅
-Networking         ██████████  100% ✅
-Git & GitHub       ██████████  100% ✅
-Docker             ██████████  100% ✅
-Phase 1 MCQ        ██████████  100% ✅
-Mini Project       ██████████  100% ✅
-GitHub Actions     ██████░░░░  In Progress 🔄
-Jenkins            ░░░░░░░░░░  Upcoming ⏳
-Kubernetes         ░░░░░░░░░░  Upcoming ⏳
-AWS                ░░░░░░░░░░  Upcoming ⏳
-Terraform          ░░░░░░░░░░  Upcoming ⏳
-Ansible            ░░░░░░░░░░  Upcoming ⏳
-```
-
 ### 🏆 Completed
 
 * ✅ Linux
