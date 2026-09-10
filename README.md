@@ -35,72 +35,6 @@ The goal is not just to memorize commands or understand theory, but to develop t
 
 ---
 
-# 🗺️ DevOps Roadmap
-
-```text
-                    ┌──────────────────────┐
-                    │   Linux Fundamentals │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │   Shell Scripting    │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Computer Networking  │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Git & GitHub         │
-                    │ Fundamentals         │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Git & GitHub         │
-                    │ Advanced             │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Docker Fundamentals  │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Docker Advanced      │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Phase 1 MCQ Exam     │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Mini Project         │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ GitHub Actions       │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Jenkins              │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Kubernetes           │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ AWS Cloud            │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Terraform            │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Ansible              │
-                    └──────────────────────┘
-```
-
 
 
 ## 🎯 Roadmap Progress
@@ -131,64 +65,7 @@ This repository follows an **AI-assisted learning approach**.
 
 AI is used as a **learning accelerator**, not as a replacement for understanding the technology.
 
-### AI can help with:
 
-```text
-┌───────────────┐
-│   Learn       │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│   Practice    │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│   Encounter   │
-│   an Error    │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ AI-assisted   │
-│ Debugging     │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Understand    │
-│ the Root Cause│
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Fix & Verify  │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Document      │
-│ the Solution  │
-└───────────────┘
-```
-
-### AI Usage Principles
-
-> **Don't just ask AI for the answer. Ask why the answer works.**
-
-For every important problem:
-
-1. Identify the problem
-2. Investigate the symptoms
-3. Form a hypothesis
-4. Use AI to assist the investigation
-5. Test the proposed solution
-6. Understand the root cause
-7. Document the lesson
-8. Reproduce the solution manually
-
----
-
-# 📅 90 Days of DevOps
-
-This roadmap is complemented by the **90 Days of DevOps** learning challenge.
-
-> 🔥 **Rule: Practice DevOps every day.**
 
 Each day should contain some combination of:
 
@@ -199,25 +76,6 @@ Each day should contain some combination of:
 * 📝 Documentation
 * 🔧 Building
 
-### Daily Learning Cycle
-
-```text
-LEARN
-  ↓
-PRACTICE
-  ↓
-BREAK SOMETHING
-  ↓
-DEBUG
-  ↓
-UNDERSTAND
-  ↓
-FIX
-  ↓
-DOCUMENT
-  ↓
-REPEAT
-```
 
 ---
 
@@ -450,5 +308,5 @@ GitHub: [@shahab1729](https://github.com/shahab1729)
 </p>
 
 <p align="center">
-  Made with curiosity, Linux, Docker, coffee ☕ and a lot of debugging.
+  Made with curiosity and a lot of debugging.
 </p>
